@@ -1,0 +1,38 @@
+<%- include('../include/_header') %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section>
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="card py-4">
+
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="round-image">
+                        <img src="/upload/<%= user[0].image %>" class="rounded-circle" width="97" />
+                    </div>
+                </div>
+
+                <div class="text-center">
+
+                    <h4 class="mt-3">
+                        <%= user[0].full_name %>
+                    </h4>
+                    <span>
+                        <%= user[0].age %>
+                    </span>
+
+                    <div class="px-5">
+                        <p class="content">
+                            <%= user[0].email %>
+                        </p>
+                        <a href="/"><button class="btn btn-primary">Back</button></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <%- include('../include/_footer') %>

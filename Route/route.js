@@ -18,6 +18,7 @@ router.get('/edit/:id', userController.editUser);
 
 router.post('/edit/:id', userController.editedUser);
 
+router.get('/show/:id', userController.showUser);
 
 
 module.exports = router;

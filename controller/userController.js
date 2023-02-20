@@ -79,7 +79,13 @@ const userController = {
                 })
 
             }
-        });
+        })
+    }, showUser: (req, res) => {
+        const id = req.params.id;
+        db.all(`SELECT * FROM users WHERE id = ?`, [id], (err, rows) => {
+            if (err) return console.error(err.message);
+            res.render('user/show', { user: rows });
+        })
     }
 }
 
