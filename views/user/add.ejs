@@ -2,6 +2,8 @@
     <div class="container">
         <h1>Add New User</h1>
 
-        <%- include("./form") %>
+        <form action="/add" method="POST" enctype="multipart/form-data">
+            <%- include("./form") -%>
+        </form>
     </div>
     <%- include("../include/_footer") %>

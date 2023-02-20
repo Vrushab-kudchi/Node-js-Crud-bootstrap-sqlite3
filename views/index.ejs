@@ -1,8 +1,65 @@
 <%- include("include/_header") %>
     <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>Check Users</h1>
+            </div>
+            <div class="col-lg-4">
+            </div>
+        </div>
+        <a href="/add"><button class="btn btn-dark btn-lg">Add Users</button></a>
         <br>
-        <h1>Check Users</h1>
         <br>
+        <br>
+        <br>
+        <table class="table table-light">
+            <thead>
+                <tr class="table-light">
+                    <th>
+
+                    </th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">view</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% user.forEach((data)=> { %>
+                    <tr>
+                        <th>
+
+                        </th>
+                        <th scope="row">
+                            <%= data.full_name %>
+                        </th>
+                        <td class="table-light">
+                            <%= data.age %>
+                        </td>
+                        <td class="table-light">
+                            <%= data.email %>
+                        </td>
+                        <td class="table-light"><img class="profile-index" src="upload/<%= data.image %>"
+                                alt="profilePhoto">
+                        </td>
+                        <td class="table-light">
+                            <form method="get" action="/delete/<%= data.id %>">
+                                <button class="btn btn-danger">Delete</button>
+                            </form>
+                            <form method="get" action="/edit/<%= data.id %>">
+                                <button class="btn btn-info">Edit</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } ) %>
+            </tbody>
+        </table>
+
+
+
+
+
 
     </div>
     <%- include("include/_footer") %>

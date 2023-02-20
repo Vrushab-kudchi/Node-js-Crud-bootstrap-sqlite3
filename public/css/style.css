@@ -1,5 +1,21 @@
 body{
-    background-color: rgb(255, 255, 255);
 }
 
+h1{
+    padding: 50px;
+}
 
+p{
+    color: #667798;
+}
+
+.form{
+    color: #00AEFF;
+}
+
+/* index file profile photo */
+
+.profile-index{
+    width: auto;
+    height : 100px;
+}
